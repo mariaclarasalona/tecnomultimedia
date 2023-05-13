@@ -4,13 +4,23 @@ TP1 Variables y Condicionales
 Maria Clara Saloña
 85207/7
 */
-PImage img1 ;
-PImage img2 ;
-PImage img3 ;
+PImage imgtextos1 ;
+PImage imgtextos2 ;
+
+PImage imgserpiente1 ;
+PImage imgserpiente2 ;
+PImage imgserpiente3 ;
+
+PImage imgutu1 ;
+PImage imgutu2 ;
 
 
 int xtxt1; //x1 del texto
 int ytxt1; //y1 del texto
+
+int t1; // transparencia
+
+int rota; //rotacio 
 
 int estado;
 
@@ -20,11 +30,19 @@ void setup(){
   frameRate(30);
   
   ///carga de imagenes
-  /*
-  img = loadImage("img.jpeg");
-  img = loadImage("img.jpeg");
-  img = loadImage("img.jpeg");
-  */
+
+  imgtextos1 = loadImage("revealed_texts_1.jpg");
+  imgtextos2 = loadImage("revealed_texts_2.jpg");
+  
+  imgserpiente1 = loadImage("serpiente_1.jpg");
+  imgserpiente2 = loadImage("serpiente_2.jpg");
+  imgserpiente3 = loadImage("serpiente_3.jpg");
+  
+  imgutu1 = loadImage("uturunku_1.jpg");
+  imgutu2 = loadImage("uturunku_2.jpg");
+  
+  t1 = 0;
+
 }
 void draw(){
   
@@ -41,6 +59,10 @@ void draw(){
   text("Comenzar", width/2, height/1.5);
   
   }else if ( estado == 2 ){  /// obra 1
+  image(imgtextos1,350,0,350,350);
+    //tint(255, t1);
+    //rotate(rota);
+    //rota += 0.02;
   
   }else if ( estado == 3 ){  /// obra 2
   
