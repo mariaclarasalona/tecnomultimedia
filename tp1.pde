@@ -7,6 +7,7 @@ Maria Clara Saloña
 PImage imgtextos1 ;
 PImage imgtextos2 ;
 String txtrlv = "Textos revelados es una instalación interactiva que invita a descubrir textos ocultos en la pantalla. Cada gesto de la mano sobre el tejido elástico da vida a las palabras.";
+String txtsrp = "La serpiente representa con su forma sinuosa y fluida represental el sistema de las redes sociales, un sistema de poder que elije la seduccion por sobre la potencia a la hora de someter.";
 
 PImage imgserpiente1 ;
 PImage imgserpiente2 ;
@@ -45,7 +46,8 @@ void setup(){
   imgutu1 = loadImage("uturunku_1.jpg");
   imgutu2 = loadImage("uturunku_2.jpg");
   
-  ximg1 = -200;
+  ximg1 = -650;
+  ximg2 = 700;
   t1 = 0;
 
 }
@@ -91,10 +93,22 @@ void draw(){
   }else if ( estado == 3 ){  /// obra 2 anillos de la serpiente
   noTint();
   background(32,86,126);
+
+  fill(0);
+  textSize(40);
   
-  image(imgserpiente1,ximg1,0,350,300);
+  text("Los Anillos de la Serpiente",ximg1+620,100,300,200);
+  image(imgserpiente1,ximg1,0,600,350);
   
-  ximg1 += 1.5;
+  ximg1 += 1;
+  
+  textSize(20);
+  text(txtsrp,ximg2-300,370,300,200);
+  image(imgserpiente3,ximg2,350,600,350);
+  
+  ximg2 -= 1;
+  
+  
   }else if ( estado == 4 ){  /// obra 3 uturunku
   
   }
@@ -103,6 +117,7 @@ void draw(){
   println(frameCount);
 
   }
+  
 
   ///interaccion y colision
   /// && mouseX <= 150 && mouseX >= 500 && mouseY <= 340 && mouseY >= 440    <---- no se q esta mal
@@ -111,7 +126,10 @@ void draw(){
     estado = 2;
     
   }
-  if (frameCount == 100) {
+  if (frameCount >= 100 && estado == 2) {
     estado = 3;
+  }
+  if (frameCount >= 200 && estado == 3) {
+    estado = 4;
   }
 }
