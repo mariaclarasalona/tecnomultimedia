@@ -8,6 +8,7 @@ PImage imgtextos1 ;
 PImage imgtextos2 ;
 String txtrlv = "Textos revelados es una instalación interactiva que invita a descubrir textos ocultos en la pantalla. Cada gesto de la mano sobre el tejido elástico da vida a las palabras.";
 String txtsrp = "La serpiente representa con su forma sinuosa y fluida represental el sistema de las redes sociales, un sistema de poder que elije la seduccion por sobre la potencia a la hora de someter.";
+String txtutu = "Uturunku (jaguar) es una instalación que se presenta como un espacio ritual, frente a un hombre contemporáneo falto de religiosidad, ávido de buscar la espiritualidad como relato pseudocientífico/religioso. A falta de un relato tanático que dé sentido a la muerte y por tanto a la existencia, este espacio ritual intenta erigirse como posible refugio ante las inclemencias de hoy, pero no deja de presentarse como un mar confuso de signos desarraigados, imagen de nuestro tiempo o gesto melancólico de un pasado ancestral.";
 
 PImage imgserpiente1 ;
 PImage imgserpiente2 ;
@@ -22,12 +23,12 @@ int ximg2 ; //x de imagen2
 
 
 int t1; // transparencia
-int t2;
-int t3;
 
 int rota; //rotacio 
 
 int estado;
+
+int cambiadordeestado;
 
 void setup(){
   size (600,600);
@@ -49,6 +50,10 @@ void setup(){
   ximg1 = -650;
   ximg2 = 700;
   t1 = 0;
+  
+  cambiadordeestado = 0;
+  
+  //rota = 5;
 
 }
 void draw(){
@@ -92,7 +97,7 @@ void draw(){
   
   }else if ( estado == 3 ){  /// obra 2 anillos de la serpiente
   noTint();
-  background(32,86,126);
+  background(28,107,165);
 
   fill(0);
   textSize(40);
@@ -110,11 +115,28 @@ void draw(){
   
   
   }else if ( estado == 4 ){  /// obra 3 uturunku
+  background(0);
+  fill(255);
+  textSize(40);
+  
+  
+  
+  image(imgutu1,0,0,350,300);
+  image(imgutu2,350,0,350,300);
+  
+  //pushStyle();
+  
+  //rotate(rota);
+  text("UTURUNKU",300,200);
+  //popStyle();
+  textSize(20);
+  text(txtutu,100,400,400,200);
   
   }
   if (estado >= 2){
     
-  println(frameCount);
+    cambiadordeestado += 1;
+  //println(frameCount);
 
   }
   
@@ -126,10 +148,14 @@ void draw(){
     estado = 2;
     
   }
-  if (frameCount >= 100 && estado == 2) {
+  if (cambiadordeestado >= 300 && estado == 2) {
     estado = 3;
   }
-  if (frameCount >= 200 && estado == 3) {
+  if (cambiadordeestado >= 800 && estado == 3) {
     estado = 4;
+  }
+  if (cambiadordeestado >= 1000 && estado == 4) {
+    estado = 1;
+    cambiadordeestado = 0;
   }
 }
