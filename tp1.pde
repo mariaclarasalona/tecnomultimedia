@@ -57,6 +57,7 @@ void setup(){
 
 }
 void draw(){
+  println(cambiadordeestado);
   
   if (estado == 1){    /// pantalla de inicio
   background(255);
@@ -67,8 +68,8 @@ void draw(){
   textSize(20);
   text("TM1 2023 comision 3 prof. David Bedoian TP1 Variables y Condicionales", 100,100,400,400);
   text(" Maria Clara Saloña 85207/7",300,200);
-  textSize(40);
-  text("Comenzar", width/2, height/1.5);
+  textSize(35);
+  text("Click para comenzar", width/2, height/1.5);
   
   }else if ( estado == 2 ){  /// obra 1 textos revelados
   background(0);
@@ -116,7 +117,7 @@ void draw(){
   
   }else if ( estado == 4 ){  /// obra 3 uturunku
   background(0);
-  fill(255);
+  fill(240,41,237);
   textSize(40);
   
   
@@ -129,8 +130,9 @@ void draw(){
   //rotate(rota);
   text("UTURUNKU",300,200);
   //popStyle();
-  textSize(20);
-  text(txtutu,100,400,400,200);
+  textSize(15);
+  fill(255);
+  text(txtutu,50,350,500,200);
   
   }
   if (estado >= 2){
@@ -154,7 +156,7 @@ void draw(){
   if (cambiadordeestado >= 800 && estado == 3) {
     estado = 4;
   }
-  if (cambiadordeestado >= 1000 && estado == 4) {
+  if (cambiadordeestado >= 1200 && estado == 4) {
     estado = 1;
     cambiadordeestado = 0;
   }
