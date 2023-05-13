@@ -6,6 +6,7 @@ Maria Clara Saloña
 */
 PImage imgtextos1 ;
 PImage imgtextos2 ;
+String txtrlv = "Textos revelados es una instalación interactiva que invita a descubrir textos ocultos en la pantalla. Cada gesto de la mano sobre el tejido elástico da vida a las palabras.";
 
 PImage imgserpiente1 ;
 PImage imgserpiente2 ;
@@ -14,11 +15,14 @@ PImage imgserpiente3 ;
 PImage imgutu1 ;
 PImage imgutu2 ;
 
+int ximg1 ; //x de imagen1
+int ximg2 ; //x de imagen2
 
-int xtxt1; //x1 del texto
-int ytxt1; //y1 del texto
+
 
 int t1; // transparencia
+int t2;
+int t3;
 
 int rota; //rotacio 
 
@@ -41,6 +45,7 @@ void setup(){
   imgutu1 = loadImage("uturunku_1.jpg");
   imgutu2 = loadImage("uturunku_2.jpg");
   
+  ximg1 = -200;
   t1 = 0;
 
 }
@@ -58,18 +63,43 @@ void draw(){
   textSize(40);
   text("Comenzar", width/2, height/1.5);
   
-  }else if ( estado == 2 ){  /// obra 1
-  image(imgtextos1,350,0,350,350);
-    //tint(255, t1);
+  }else if ( estado == 2 ){  /// obra 1 textos revelados
+  background(0);
+  
+  //imagen1
+  tint(255, t1);
+  image(imgtextos1,250,0,350,300);
+
+  
+   //imagen2
+  image(imgtextos2,0,300,350,350);
+
+  
+   //texto
+  fill(255);
+  textSize(40);
+  text("Textos Revelados",30,100,200,200);
+  textSize(15);
+  text(txtrlv,350,370,200,200);
+
+  
+  t1 += 1;
+
     //rotate(rota);
     //rota += 0.02;
   
-  }else if ( estado == 3 ){  /// obra 2
+  }else if ( estado == 3 ){  /// obra 2 anillos de la serpiente
+  noTint();
+  background(32,86,126);
   
-  }else if ( estado == 4 ){  /// obra 3
+  image(imgserpiente1,ximg1,0,350,300);
+  
+  ximg1 += 1.5;
+  }else if ( estado == 4 ){  /// obra 3 uturunku
   
   }
   if (estado >= 2){
+    
   println(frameCount);
 
   }
@@ -77,7 +107,11 @@ void draw(){
   ///interaccion y colision
   /// && mouseX <= 150 && mouseX >= 500 && mouseY <= 340 && mouseY >= 440    <---- no se q esta mal
   if (mousePressed == true && estado == 1) {
+    
     estado = 2;
     
+  }
+  if (frameCount == 100) {
+    estado = 3;
   }
 }
