@@ -1,0 +1,4 @@
+-interaction with mouse
+-colision with mouse
+-estado change
+-insert game
