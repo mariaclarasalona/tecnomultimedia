@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="estilos.css"> 
+  </head>
+  <body>
+    <div class="container-xxl ">
+      <nav class="navbar navbar-expand-lg bg-body-secondary rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TPWeb Final</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#metamorfosis">La Metamorfosis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#equipo">El equipo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">Sobre el proyecto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#juego">Jugar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#creditos">Creditos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="clearfix">
+        <div class="image-container bg-danger bg-gradient shadow-lg border border-black rounded-4 mb-2 mx-5 ">
+            <h1 class="z-3 position-absolute fw-bold p-5 fs-1">La Metamorfosis</h1>
+            <img src="img/metamorfosis-2.jpg" alt="" class="ps-5 img-fluid w-50  ">
+        </div>
+      </div>
+      
+
+      <div class="metamorfo" id="metamorfosis">
+        <div class="container-xl p-5">
+          <h2 class="ms-2 pb-2 pt-2 fw-bold">La Metamorfosis de Kafka</h2>
+          <p class="ms-4">La metamorfosis es una novela corta escrita por Franz Kafka en 1915. La historia trata sobre Gregorio Samsa, cuya repentina transformación en un enorme insecto dificulta cada vez más la comunicación de su entorno social con él, hasta que es considerado intolerable por su familia y finalmente perece.</p>
+          <p class="ms-4">Franz Kafka fue un escritor bohemio en lengua alemana. Su obra, de las más influyentes de la literatura universal, ​​es una de las pioneras en la fusión de elementos realistas con fantásticos y tiene como principales temas los conflictos paternofiliales, la ansiedad, el existencialismo, la brutalidad física y psicológica, la culpa, la filosofía del absurdo, la burocracia y las transformaciones espirituales.</p>
+
+        </div>
+      </div>
+
+      <div class="equipo" id="equipo">
+        <div class="container">
+          <div class="clearfix">
+              <h2 class="ms-2 mt-2 p-2 fw-bold">Sobre el equipo</h2>
+              <p class="ms-4">El equipo de desarrollo de este trabajo esta compuesto por solo una persona.</p>
+              <p class="ms-4">Maria Clara Saloña, estudiante de la UNLP en las carreras Lic. en Diseño Multimedial y Lic. en Plástica con orientación Dibujo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about rounded-4" id="about">
+        <div class="container-fluid pt-3 " >
+          <h2 class="ms-2 mt-2 p-2 fw-bold">Sobre el proyecto</h2>
+          <p class="ms-4">Este proyecto en <code>P5.JS</code>  de aventura gráfica con sección de minijuego basado en La Metamorfosis de Franz Kafka se creó para la cátedra de Tecnología Multimedial 1, la aventura gráfica está basada en la novela por Franz Kafka "La Metamorfosis" que fué creada originalmente para el TP3 en lenguaje <code>Processing</code> y luego adaptada a <code>P5.JS</code> para el TP Final. </p>
+          <p class="ms-4">Esta página fué creada en html utilizando el framework <code>Bootstrap</code> y una hoja de estilos propia con el fin de presentar el proyecto de aventura gráfica con minijuego en un formato web. Se hizo uso de distintos componentes ya pertenecientes al framework, como la barra de navegación al tope de la página para acceder rápidamente a las diferentes secciones y el carrusel de imagenes conteniendo capturas del proceso y contenidos del proyecto en P5.JS, pero incluyendo una hoja de estilos que permite adaptar el diseño visual a una estética similar a la del proyecto.</p>
+          <p class="ms-4 fw-bold">A continuación una selección de imágenes del proyecto en etapas de desarrollo:</p>
+  
+          <div class="bd-example m-0 border-0 p-2">
+            <div class="mx-auto p-2 " style="width: 40%; height: 100px;">
+  
+              <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/proceso1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="fs-4 p-3 text-dark bg-white bg-opacity-50 rounded-4">Casa de los Samsa</h5>
+                      <p class="fs-5 p-3 text-dark bg-white bg-opacity-50 rounded-4">Fondo para el minijuego en previo al final</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/TP3 flowchart.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="fs-4 p-3 text-dark bg-white bg-opacity-50 rounded-4">Diagrama de flujo</h5>
+                      <p class="fs-5 p-3 text-dark bg-white bg-opacity-50 rounded-4">Flowchart que indica el flujo de pantallas de la aventura y sus distintos finales</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/gregor.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="fs-4 p-3 text-dark bg-white bg-opacity-50 rounded-4">Sprite de Gregory</h5>
+                      <p class="fs-5 p-3 text-dark bg-white bg-opacity-50 rounded-4">Sprite para Gregor Samsa para la pantalla de minijuego</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/proceso2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="fs-4 p-3 text-dark bg-white bg-opacity-50 rounded-4">Boceto</h5>
+                      <p class="fs-5 p-3 text-dark bg-white bg-opacity-50 rounded-4">Boceto inicial de la pantalla</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+  
+        </div>
+
+      </div>
+      
+      
+      <div class="container my-5">
+        <div class=" p-2" id="juego">
+          <h2 class="fw-bold">Jugar</h2>
+  
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Click para jugar!
+          </button>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content " style="width: fit-content; height: fit-content;">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Aventura "La Metamorfosis"</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <iframe src="tpFinal/index.html" frameborder="0" width="800" height="800"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="container my-5 rounded text-bg-dark p-3">
+        
+        <div class="" id="creditos">
+          <h3>Créditos</h3>
+          <div class="row">
+            <div class="col">
+              <p class="fw-bold">Trabajo Práctico Final + Tecnologías Web </p>
+              <p class="fw-bold m-0">Hecho por María Clara Saloña </p>
+              <p class="fw-bold m-0">Legajo 85207/7</p>
+            </div>
+            <div class="col">
+              <p class="fw-bold ">UNLP Lic. en Diseño Multimedial 2023</p>
+              <p class="fw-bold m-0">Tecnología Multimedial 1 Comisión 3</p>
+              <p class="fw-bold m-0">Profs. Christian Silva y David Bedoian</p>
+            </div>
+          </div>
+          
+        </div>  
+      </div>
+      
+
+
+    </div>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
